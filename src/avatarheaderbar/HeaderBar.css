@@ -1,0 +1,280 @@
+/* 🌟 Outer Container */
+.header-container {
+    
+    height: auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 10px;
+    border-radius: 12px;
+    padding: 15px 10px;
+    border: 1px solid #C2A7A7;
+    background: #FFFFFF;
+    padding: 10px;
+    flex-wrap: wrap;
+    margin-top: 70px; /* Add top margin */
+    margin-left: 10px; /* Add left margin */
+    margin-right: 10px; /* Add right margin */
+}
+
+/* 📌 Left Section (Back Button + Title Next to Each Other) */
+.left-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px; /* Ensures spacing between elements */
+}
+
+.top-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* 🔙 Back Button */
+.back-button {
+    width: 32px;
+    height: 32px;
+    border-radius: 24px;
+    background: #b32d5d;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-right: 10px;
+}
+
+.back-button svg {
+    color: white;
+    width: 24px;
+    height: 24px;
+}
+
+.back-button:hover {
+    background: #9a254e;
+}
+
+.back-button:active {
+    transform: scale(0.95);
+}
+
+/* 🏆 Title: "Synapse Competition 2025" (Next to Back Button) */
+.header-titles {
+    display: flex;
+    flex-direction: column;
+}
+
+.header-title {
+    font-family: "Jost", sans-serif;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    background: white;
+    color: #656565;
+    border-radius: 8px;
+    padding: 5px 10px;
+    margin: 0;
+}
+
+.header-subtitle {
+    font-size: 14px;
+    color: #888;
+}
+
+/* 👤 Avatar Container */
+.avatar-group {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    border: 1px solid #C2A7A7; /* Add border */
+    border-radius: 16px; /* Match border radius */
+    padding: 6px 12px; /* Match padding */
+    background: #fff; /* Match background */
+    color: #555; /* Match text color */
+}
+
+.avatar {
+    margin-right: 5px;
+}
+
+.avatar-count {
+    margin-left: 5px;
+}
+
+.add-avatar {
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+/* 📅 Right Section (Date + Created By + Buttons) */
+.right-section {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 10px;
+}
+
+/* 📆 Date Section */
+.date-creator-container {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Adjust the gap as needed */
+    flex-wrap: wrap;
+}
+
+.date-section {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #333;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* 📝 Created By Section */
+.creator-section {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #555;
+    border: 1px solid #C2A7A7; /* Add border */
+    border-radius: 16px; /* Match border radius */
+    padding: 6px 12px; /* Match padding */
+}
+
+/* 🎯 Buttons (New Task & Save) */
+.action-buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.new-task-btn {
+    background: white;
+    color: #B32D5D;
+    padding: 6px 12px;
+    border-radius: 16px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    border: 1px solid #C2A7A7; /* Add border */
+}
+
+.new-task-btn:hover {
+    background: #9a254e;
+    color: white;
+}
+
+.save-btn {
+    background: #fff;
+    color: #555;
+    padding: 6px 12px;
+    border-radius: 16px;
+    font-size: 14px;
+    font-weight: 500;
+    border: 1px solid #C2A7A7; /* Add border */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.save-btn:hover {
+    background: #f5f5f5;
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 1024px) {
+    .header-container {
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 12px 8px;
+    }
+
+    .left-section {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .right-section {
+        width: 100%;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .header-title {
+        font-size: 20px;
+        width: auto;
+    }
+
+    .avatar-group {
+        width: 100px;
+        height: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-container {
+        padding: 10px 6px;
+    }
+
+    .header-title {
+        font-size: 18px;
+    }
+
+    .avatar-group {
+        width: 90px;
+        height: 28px;
+        gap: 8px;
+    }
+
+    .avatar,
+    .avatar-count,
+    .add-avatar {
+        width: 22px;
+        height: 22px;
+    }
+
+    .right-section {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-container {
+        padding: 8px 5px;
+    }
+
+    .header-title {
+        font-size: 16px;
+        width: auto;
+    }
+
+    .avatar-group {
+        width: 80px;
+        height: 26px;
+        gap: 6px;
+    }
+
+    .avatar,
+    .avatar-count,
+    .add-avatar {
+        width: 20px;
+        height: 20px;
+    }
+
+    .right-section {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

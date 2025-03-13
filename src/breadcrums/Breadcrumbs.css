@@ -1,0 +1,127 @@
+/* Container */
+.breadcrumbs-container {
+    width: 1185px;
+    height: 40px;
+    position: absolute;
+    top: 94px;
+    left: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 8px 16px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    border: 1.5px solid #e5e5e5;
+    max-width: 100%;
+    overflow-x: auto;
+  }
+  
+  /* Breadcrumbs Navigation */
+  .breadcrumbs {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .breadcrumb-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  
+  .breadcrumb-icon {
+    width: 20px;
+    height: 20px;
+    color: #555;
+  }
+  
+  .breadcrumb-dropdown {
+    padding: 6px 12px;
+    font-size: 14px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    background: #fff;
+    cursor: pointer;
+    outline: none;
+    transition: border-color 0.3s ease;
+  }
+  
+  .breadcrumb-dropdown:hover {
+    border-color: #007bff;
+  }
+  
+  .breadcrumb-text {
+    font-size: 14px;
+    color: #333;
+    font-weight: 500;
+  }
+  
+  .breadcrumb-separator {
+    font-size: 16px;
+    color: #777;
+  }
+  
+  /* Competition Label */
+  .competition-label {
+    width: 139px;
+    height: 18px;
+    font-family: "Jost", sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 150%;
+    letter-spacing: 0%;
+    background: #667085;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    text-align: center;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1200px) {
+    .breadcrumbs-container {
+      width: 100%;
+      flex-direction: column;
+      height: auto;
+      align-items: flex-start;
+    }
+    .breadcrumbs {
+      flex-wrap: wrap;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .breadcrumbs {
+      gap: 6px;
+    }
+    .breadcrumb-dropdown {
+      font-size: 12px;
+      padding: 5px 10px;
+    }
+    .breadcrumb-icon {
+      width: 18px;
+      height: 18px;
+    }
+    .competition-label {
+      font-size: 10px;
+      width: auto;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .breadcrumbs-container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .breadcrumb-dropdown {
+      font-size: 12px;
+      padding: 4px 8px;
+    }
+    .breadcrumb-icon {
+      width: 16px;
+      height: 16px;
+    }
+  }
+  

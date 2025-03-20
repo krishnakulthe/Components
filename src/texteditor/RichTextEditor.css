@@ -1,0 +1,29 @@
+.editor-container {
+    margin: 20px 0;
+  }
+  
+  .ql-editor {
+    padding: 15px;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  @media (max-width: 768px) {
+    .ql-toolbar {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+  
+  .ql-toolbar {
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 4px 4px 0 0;
+  }
+  
+  .ql-container {
+    border: 1px solid #ccc;
+    border-radius: 0 0 4px 4px;
+    min-height: 200px;
+  }
+  

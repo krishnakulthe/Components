@@ -1,5 +1,5 @@
 {
-  "name": "datepicker",
+  "name": "your-app-name",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -7,10 +7,16 @@
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.2.0",
     "@testing-library/user-event": "^13.5.0",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
+    "date-fns": "^2.30.0",
+    "lucide-react": "^0.479.0",
+    "react": "^18.3.1",
+    "react-date-range": "^1.4.0",
+    "react-datepicker": "^8.2.1",
+    "react-dom": "^18.3.1",
+    "react-quill": "^2.0.0",
     "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "your-app-name": "file:"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -22,7 +28,11 @@
     "extends": [
       "react-app",
       "react-app/jest"
-    ]
+    ],
+    "rules": {
+      "no-console": "off",
+      "no-debugger": "off"
+    }
   },
   "browserslist": {
     "production": [
@@ -35,5 +45,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "resolutions": {
+    "react-datepicker": {
+      "source-map-loader": "ignore"
+    }
   }
 }

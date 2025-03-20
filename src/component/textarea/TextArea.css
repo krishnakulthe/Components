@@ -1,0 +1,44 @@
+/* TextArea Styles */
+.textarea-container {
+    width: 750px;
+    height: 200px;
+    padding-top: 10px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    gap: 10px;
+    border-radius: 8px;
+    border-width: 1.5px;
+    
+  }
+  
+  textarea {
+    resize: none;
+    min-height: 100px;
+    width: 100%;
+  }
+  
+  .textarea-container label {
+    font-weight: bold;
+    color: #555;
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .textarea-container textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .textarea-container textarea:focus {
+    border-color: #cf1e1e;
+    outline: none;
+  }
+  
+  .textarea-container textarea:disabled {
+    background-color: #f2f2f2;
+    cursor: not-allowed;
+  }
+  

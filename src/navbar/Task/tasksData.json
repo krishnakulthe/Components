@@ -1,0 +1,24 @@
+[
+    {
+      "name": "Design Homepage Banner",
+      "type": "Graphic Design",
+      "assignedTo": "John Doe",
+      "dueDate": "2025-03-25",
+      "status": "In Progress"
+    },
+    {
+      "name": "Write Blog Post",
+      "type": "Content Writing",
+      "assignedTo": "Jane Smith",
+      "dueDate": "2025-03-22",
+      "status": "Pending"
+    },
+    {
+      "name": "Product Photoshoot",
+      "type": "Photography",
+      "assignedTo": "Emily Johnson",
+      "dueDate": "2025-03-30",
+      "status": "Completed"
+    }
+  ]
+  

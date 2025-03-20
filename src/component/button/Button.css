@@ -1,0 +1,26 @@
+/* Button Styles */
+.custom-button {
+    width: 110px;
+    height: 40px;
+    justify-content: space-between;
+
+  }
+  
+  .back-button {
+    background-color: #ccc;
+    color: black;
+  }
+  
+  .back-button:hover {
+    background-color: #f7dcdc;
+  }
+  
+  .finish-button {
+    background-color: #db6565;
+    color: white;
+  }
+  
+  .finish-button:hover {
+    background-color: #a04548;
+  }
+  

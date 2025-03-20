@@ -1,0 +1,52 @@
+/* TextField Styles */
+.text-field {
+    width: 750px;
+    height: 44px;
+    padding-top: 10px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    gap: 10px;
+    border-radius: 8px;
+    border-width: 1.5px;
+
+  }
+  
+  .text-field-label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .input-container {
+    position: relative;
+  }
+  
+  .location-icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+  }
+  
+  .text-field-input {
+    width: 97%;
+    padding: 8px 10px 8px 30px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s ease-in-out;
+  }
+  
+  .text-field-input:focus {
+    border-color: #4CAF50;
+    outline: none;
+  }
+  
+  .text-field-input:disabled {
+    background-color: #f2f2f2;
+    cursor: not-allowed;
+  }
+  

@@ -1,0 +1,17 @@
+[
+  {
+    "name": "AISSMS_logo",
+    "type": "image",
+    "src": "/Asset/Photo.jpg"
+  },
+  {
+    "name": "AISSMS_video",
+    "type": "video",
+    "src": "/videos/AISSMS_video.mp4"
+  },
+  {
+    "name": "Audio_file",
+    "type": "audio",
+    "src": "/audio/Audio_file.mp3"
+  }
+]

@@ -2,7 +2,7 @@
 .navbar-container {
   width: 100%;
   height: auto;
-  border-bottom: 1px solid lightgray;
+  border-bottom: 1px solid rgb(158, 65, 65);
   justify-content: flex-start;
 }
 
@@ -12,7 +12,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: solid lightgray;
+  border-bottom: solid rgb(142, 72, 72);
 }
 
 /* Navbar List */

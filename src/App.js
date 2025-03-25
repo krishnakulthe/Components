@@ -65,7 +65,7 @@ const App = () => {
           <Route path="/tasks" element={<Tasks tasks={tasks} onAddTask={handleAddTask} onEditTask={handleEditTask} />} />
           <Route path="/filesanduploads" element={<FilesUploads />} />
           <Route path="/publish" element={<Publish />} />
-          <Route path="/" element={<Details />} />
+          {/* <Route path="/" element={<Details />} /> */}
         </Routes>
       </div>
     </Router>

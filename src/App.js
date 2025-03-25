@@ -121,3 +121,45 @@ export default App;
 // // };
 
 // // export default App;
+
+
+
+
+
+//            select option code
+
+
+// import React, { useState } from 'react';
+// import Select from '../../datepicker/src/selectoption/Select'; // Adjust the import path
+// import { UserRoundPlus } from 'lucide-react';
+
+// const App = () => {
+//   const [selectedOption, setSelectedOption] = useState('');
+
+//   const options = [
+//     { value: 'option1', label: 'Option 1' },
+//     { value: 'option2', label: 'Option 2' },
+//     { value: 'option3', label: 'Option 3' },
+//   ];
+
+//   const handleSelectChange = (value) => {
+//     setSelectedOption(value);
+//     console.log('Selected:', value);
+//   };
+
+//   return (
+//     <div style={{ padding: '20px', display: 'flex', justifyContent: 'center' }}>
+//       <Select
+//         label="Select an Option"
+//         icon={UserRoundPlus} // Pass icon dynamically
+//         options={options}
+//         value={selectedOption}
+//         onChange={handleSelectChange}
+//         placeholder="Choose an option"
+//         width="350px"
+//       />
+//     </div>
+//   );
+// };
+
+// export default App;

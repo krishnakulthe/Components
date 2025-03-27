@@ -1,3 +1,4 @@
+/* Container and Grid */
 .files-container {
   padding: 16px;
 }
@@ -8,6 +9,7 @@
   gap: 16px;
 }
 
+/* File Card */
 .file-card {
   display: flex;
   flex-direction: column;
@@ -16,8 +18,15 @@
   border: 1px solid #ccc;
   border-radius: 8px;
   overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease;
 }
 
+.file-card:hover {
+  transform: scale(1.05);
+}
+
+/* Header with Icons */
 .file-header {
   display: flex;
   align-items: center;
@@ -25,114 +34,130 @@
   width: 100%;
   background-color: #f5f5f5;
   padding: 8px;
-  font-size: 14px;
 }
 
-.file-icon img, video {
-  width: 100px;
-  height: 100px;
+.file-header span {
+  margin-left: 8px;
 }
 
-.file-name {
-  margin-top: 8px;
-  font-size: 14px;
-  text-align: center;
+/* Separate Classes for Image, Video, and Audio */
+.image-icon img.image-preview {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
 }
 
-.audio-icon {
-  font-size: 48px;
+.video-icon video.video-preview {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
 }
 
-@media (max-width: 600px) {
-  .files-grid {
-    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-  }
+.audio-icon audio.audio-preview {
+  width: 100%;
 }
 
-@media (min-width: 900px) {
-  .files-grid {
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-  }
-}
-
+/* Popup Styling */
 .popup {
   position: fixed;
   top: 0;
   left: 0;
-  width: 50%;
-  height: 50%;
+  width: 100vw;
+  height: 100vh;
   background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(10px);
+  animation: fadeIn 0.3s ease;
+}
+
+/* Popup Container */
+.img-show {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 90vw;
+  max-height: 90vh;
+}
+
+/* Close Icon */
+.close-icon {
+  position: fixed; /* Changed from absolute to fixed */
+  top: 120px; /* Position at the top of the page */
+  right: 400px; /* Position at the right of the page */
+  cursor: pointer;
+  color: #333;
+  transition: color 0.3s ease;
+  z-index: 1000; /* Ensure it appears above other elements */
+}
+
+.close-icon:hover {
+  color: #262424;
+}
+
+/* Popup Content */
+.popup-content {
+  position: relative;
+}
+
+/* Image Popup */
+.popup-image {
+  width: 600px;
+  height: 400px;
+  object-fit: cover;
+}
+
+/* Video Popup */
+.popup-video {
+  width: 600px;
+  height: 400px;
+  object-fit: contain;
+}
+
+/* Audio Popup */
+.popup-audio {
+  width: 300px;
+  height: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.popup-content {
-  background: white;
-  padding: 20px;
-  border-radius: 5px;
-  position: relative;
-}
-
-.close-button {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background: none;
-  border: none;
-  font-size: 20px;
-  cursor: pointer;
-}
-
-.popup {
-  width: 900px;
-  margin: auto;
-  text-align: center;
-}
-
-.popup img {
-  width: 200px;
-  height: 200px;
-  cursor: pointer;
-}
-
-.show {
-  z-index: 999;
-  display: none;
-}
-
-.show .overlay {
+/* Audio Player */
+.audio-player {
   width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.66);
-  position: absolute;
-  top: 0;
-  left: 0;
 }
 
-.show .img-show {
-  width: 600px;
-  height: 400px;
-  background: #FFF;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  overflow: hidden;
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+  .files-grid {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  }
+
+  .popup-image, .popup-video {
+    width: 100%;
+    height: auto;
+  }
 }
 
-.img-show span {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  z-index: 99;
-  cursor: pointer;
+@media (min-width: 900px) {
+  .files-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
 }
 
-.img-show img {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

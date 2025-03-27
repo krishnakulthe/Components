@@ -4,6 +4,7 @@
   flex-wrap: wrap;
   gap: 10px;
   padding: 10px;
+  transition: background-color 0.3s ease;
 }
 
 .links-container h3 {
@@ -26,7 +27,7 @@
 .links-container a {
   text-decoration: none;
   color: #000;
-  background-color: #f0f0f0;
+  background-color: #f2eded;
   padding: 8px 16px;
   border-radius: 20px;
   display: inline-flex;
@@ -34,15 +35,17 @@
   align-items: center;
   font-size: 14px;
   white-space: nowrap;
-  border: 1px solid #841111; /* Added border */
+  border: 1px solid #841111;
+  transition: all 0.3s ease; /* Added transition for smooth hover effect */
 }
 
 .links-container a:hover {
-  background-color: #e0e0e0;
+  color: #841111; /* Change text color on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add subtle shadow on hover */
+  transform: translateY(-2px); /* Slightly lift the link on hover */
 }
 
 .add-link-icon {
-  
   cursor: pointer;
   display: flex;
   align-items: center;

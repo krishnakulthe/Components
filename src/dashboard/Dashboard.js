@@ -1,6 +1,7 @@
 import React from 'react';
 import StatusCard from '../dashboard/StatusCard';
 import EventList from '../dashboard/EventList';
+import { CirclePlus } from 'lucide-react'; // Import the CirclePlus icon
 import './Dashboard.css';
 
 const Dashboard = ({ activeEvents, pendingTasks, deadlines, upcomingEvents, pastEvents, tasks }) => {
@@ -15,7 +16,17 @@ const Dashboard = ({ activeEvents, pendingTasks, deadlines, upcomingEvents, past
       </div>
 
       <div className="event-section">
-        <EventList title="Upcoming Events" data={upcomingEvents} type="upcoming" />
+        <EventList
+          title="Upcoming Events"
+          data={upcomingEvents}
+          type="upcoming"
+          icon={
+            <div className="add-event">
+              <CirclePlus size={20} className="add-icon" />
+              <span className="add-event-text">New Event</span>
+            </div>
+          }
+        />
         <EventList title="Past Events" data={pastEvents} />
       </div>
 

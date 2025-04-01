@@ -33,6 +33,16 @@
   margin-bottom: 10px;
 }
 
+.icon-container {
+  cursor: pointer;
+  color: #1a1616;
+  transition: color 0.3s ease;
+}
+
+.icon-container:hover {
+  color: #a51c1c;
+}
+
 /* See All Button */
 .see-all-button {
   background-color: transparent; /* Remove background color */
@@ -51,4 +61,24 @@
 .see-all-button:hover {
   color: #a51c1c; /* Darker text color on hover */
   text-decoration: underline; /* Keep underline on hover */
+}
+
+/* Add Event Container */
+.add-event {
+  display: flex;
+  align-items: center;
+  gap: 5px; /* Add spacing between the icon and text */
+  cursor: pointer;
+  color: #120e0e;
+  transition: color 0.3s ease;
+}
+
+.add-event:hover {
+  color: #0e0808; /* Change color on hover */
+}
+
+/* Add Event Text */
+.add-event-text {
+  font-size: 14px;
+  font-weight: bold;
 }

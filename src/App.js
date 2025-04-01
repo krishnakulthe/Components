@@ -78,46 +78,79 @@
 
 /*** Dashboard ***/
 
-import React from 'react';
-import Dashboard from './dashboard/Dashboard';
+// import React from 'react';
+// import Dashboard from './dashboard/Dashboard';
 
-const App = () => {
-  const activeEvents = 10;
-  const pendingTasks = 24;
-  const deadlines = 6;
+// const App = () => {
+//   const activeEvents = 10;
+//   const pendingTasks = 24;
+//   const deadlines = 6;
 
-  const upcomingEvents = [
-    { name: 'Annual Tech Fest', college: 'AISSMS IOIT', time: '5d 4hrs' },
-    { name: 'Sports Meet', college: 'AISSMS IOIT', time: '6d 4hrs' },
-    { name: 'Cultural Meet', college: 'AISSMS IOIT', time: '7d 4hrs' },
-    { name: 'Advert Campaign', college: 'AISSMS IOIT', time: '10d 4hrs' },
-    { name: 'Podcast', college: 'AISSMS IOIT', time: '15d 4hrs' }
-  ];
+//   const upcomingEvents = [
+//     { name: 'Annual Tech Fest', college: 'AISSMS IOIT', time: '5d 4hrs' },
+//     { name: 'Sports Meet', college: 'AISSMS IOIT', time: '6d 4hrs' },
+//     { name: 'Cultural Meet', college: 'AISSMS IOIT', time: '7d 4hrs' },
+//     { name: 'Advert Campaign', college: 'AISSMS IOIT', time: '10d 4hrs' },
+//     { name: 'Podcast', college: 'AISSMS IOIT', time: '15d 4hrs' }
+//   ];
 
-  const pastEvents = [
-    { name: 'Hackathon Fest', college: 'AISSMS IOIT' },
-    { name: 'Coders Chef Challenge', college: 'AISSMS IOIT' },
-    { name: 'Cyber-Tron 2024', college: 'AISSMS IOIT' }
-  ];
+//   const pastEvents = [
+//     { name: 'Hackathon Fest', college: 'AISSMS IOIT' },
+//     { name: 'Coders Chef Challenge', college: 'AISSMS IOIT' },
+//     { name: 'Cyber-Tron 2024', college: 'AISSMS IOIT' }
+//   ];
 
-  const tasks = [
-    { name: 'Create Video', event: 'Coffee and Conversations', college: 'AISSMS IOIT', date: '25th Feb' },
-    { name: 'Upload Audio File', event: 'Podcast - Our Earth', college: 'AISSMS IOIT', date: '25th Feb' },
-    { name: 'Upload Text File', event: 'News Letter', college: 'AISSMS IOIT', date: '25th Feb' },
-    { name: 'Upload Text File', event: 'Blogers Stop', college: 'AISSMS IOIT', date: '25th Feb' },
-    { name: 'Upload Text File', event: 'Brochure', college: 'AISSMS IOIT', date: '25th Feb' }
-  ];
+//   const tasks = [
+//     { name: 'Create Video', event: 'Coffee and Conversations', college: 'AISSMS IOIT', date: '25th Feb' },
+//     { name: 'Upload Audio File', event: 'Podcast - Our Earth', college: 'AISSMS IOIT', date: '25th Feb' },
+//     { name: 'Upload Text File', event: 'News Letter', college: 'AISSMS IOIT', date: '25th Feb' },
+//     { name: 'Upload Text File', event: 'Blogers Stop', college: 'AISSMS IOIT', date: '25th Feb' },
+//     { name: 'Upload Text File', event: 'Brochure', college: 'AISSMS IOIT', date: '25th Feb' }
+//   ];
 
-  return (
-    <Dashboard 
-      activeEvents={activeEvents} 
-      pendingTasks={pendingTasks} 
-      deadlines={deadlines} 
-      upcomingEvents={upcomingEvents} 
-      pastEvents={pastEvents} 
-      tasks={tasks} 
-    />
-  );
-};
+//   return (
+//     <Dashboard 
+//       activeEvents={activeEvents} 
+//       pendingTasks={pendingTasks} 
+//       deadlines={deadlines} 
+//       upcomingEvents={upcomingEvents} 
+//       pastEvents={pastEvents} 
+//       tasks={tasks} 
+//     />
+//   );
+// };
+
+// export default App;
+
+
+/*** Movie ***/
+
+
+import React, { useState } from 'react';
+import SplitView from './movie/SplitView';
+import './App.css'
+
+const messages = [
+  {
+    sender: 'Vrushali Patil',
+    time: 'Today 10:35 am',
+    text: 'We should get this out by the 21st of September',
+  },
+  {
+    sender: 'Vrushali Patil',
+    time: 'Today 2:35 pm',
+    text: 'Lorem ipsum dolor amet, consectetur adipiscing elit. Massa odio per turpis euismod potenti parturient fusce.',
+  },
+];
+
+function App() {
+  const [isCollapsed, setIsCollapsed] = useState(false);
+
+  const toggleCollapse = () => {
+    setIsCollapsed(!isCollapsed);
+  };
+
+  return <SplitView messages={messages} isCollapsed={isCollapsed} toggleCollapse={toggleCollapse} />;
+}
 
 export default App;

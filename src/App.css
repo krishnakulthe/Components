@@ -40,11 +40,15 @@
 .split-view {
   display: flex;
   height: 100vh;
+  transition: all 0.3s ease-in-out;
+  justify-content: space-between; /* Add justify-content */
 }
 
 .chat-section {
   flex: 1;
-  transition: width 0.3s ease;
+  transition: width 0.3s ease-in-out;
+  width: 586.5px; /* Set width */
+  height: 562px; /* Set height */
 }
 
 .collapsed {
@@ -59,20 +63,43 @@
   width: 40px;
   background-color: #fff;
   cursor: pointer;
-  transition: transform 0.3s;
+  transition: transform 0.3s ease-in-out;
 }
 
 .divider:hover {
   transform: scale(1.1);
 }
 
-.empty-state {
+.empty-state-container {
   flex: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.empty-state-box {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: black;
+  width: 600px;
+  height: 100%;
+  background-color: #1e1e1e;
   color: white;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  padding: 20px;
+  cursor: pointer;
+}
+
+.upload-label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
 }
 
 @media (max-width: 768px) {
@@ -88,4 +115,4 @@
   .collapsed {
     display: none;
   }
-} 
+}

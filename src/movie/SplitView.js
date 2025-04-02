@@ -10,9 +10,11 @@ const SplitView = ({ messages, isCollapsed, toggleCollapse }) => {
         <ChatWindow messages={messages} />
       </div>
       <div className="divider" onClick={toggleCollapse}>
-        {isCollapsed ? <CircleChevronLeft size={24} /> : <CircleChevronRight size={24} />}
+        {isCollapsed ? <CircleChevronRight size={24} /> : <CircleChevronLeft size={24} />}
       </div>
-      {!isCollapsed && <EmptyState />}
+      <div className={`empty-state-container ${isCollapsed ? 'hidden' : ''}`}>
+        <EmptyState />
+      </div>
     </div>
   );
 };

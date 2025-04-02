@@ -128,20 +128,9 @@
 
 import React, { useState } from 'react';
 import SplitView from './movie/SplitView';
-import './App.css'
+import './App.css';
 
-const messages = [
-  {
-    sender: 'Vrushali Patil',
-    time: 'Today 10:35 am',
-    text: 'We should get this out by the 21st of September',
-  },
-  {
-    sender: 'Vrushali Patil',
-    time: 'Today 2:35 pm',
-    text: 'Lorem ipsum dolor amet, consectetur adipiscing elit. Massa odio per turpis euismod potenti parturient fusce.',
-  },
-];
+const messages = [];
 
 function App() {
   const [isCollapsed, setIsCollapsed] = useState(false);

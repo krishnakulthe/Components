@@ -64,6 +64,10 @@
   background-color: #fff;
   cursor: pointer;
   transition: transform 0.3s ease-in-out;
+  position:absolute;
+  top: 300px;
+  left: 600px;
+ 
 }
 
 .divider:hover {

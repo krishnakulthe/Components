@@ -17,42 +17,42 @@ const BoxComponent = () => {
       <div
         className="white-div"
         style={{
-          width: isCollapsed ? "95%" : "50%",
+          width: isCollapsed ? "100%" : "50%", // Expand white div when black div disappears
           transition: "width 0.5s ease-in-out",
         }}
       ></div>
 
       {/* Black Div */}
-      <div
-        className={`black-div ${isCollapsed ? "collapsed" : "expanded"}`}
-        style={{
-          width: isCollapsed ? "5%" : "50%",
-          transition: "width 0.5s ease-in-out",
-        }}
-      >
-        {/* Upload Button */}
-        {!isCollapsed && uploadedFiles.length === 0 && (
-          <label
-            className="upload-button"
-            style={{
-              backgroundColor: "transparent",
-              padding: "10px",
-              cursor: "pointer",
-            }}
-          >
-            <Upload size={24} />
-            <input
-              type="file"
-              multiple
-              accept="image/*,video/*,audio/*"
-              onChange={handleFileUpload}
-              hidden
-            />
-          </label>
-        )}
+      {!isCollapsed && (
+        <div
+          className="black-div"
+          style={{
+            width: "50%",
+            transition: "width 0.5s ease-in-out",
+          }}
+        >
+          {/* Upload Button */}
+          {uploadedFiles.length === 0 && (
+            <label
+              className="upload-button"
+              style={{
+                backgroundColor: "transparent",
+                padding: "10px",
+                cursor: "pointer",
+              }}
+            >
+              <Upload size={24} />
+              <input
+                type="file"
+                multiple
+                accept="image/*,video/*,audio/*"
+                onChange={handleFileUpload}
+                hidden
+              />
+            </label>
+          )}
 
-        {/* Display Uploaded Files */}
-        {!isCollapsed && (
+          {/* Display Uploaded Files */}
           <div className="file-preview">
             {uploadedFiles.map((file, index) => (
               <div key={index} className="file-item">
@@ -82,16 +82,20 @@ const BoxComponent = () => {
               </div>
             ))}
           </div>
-        )}
+        </div>
+      )}
 
-        {/* Toggle Button (Moves with Black Div) */}
-        <button
-          className="toggle-button"
-          onClick={() => setIsCollapsed(!isCollapsed)}
-        >
-          {isCollapsed ? <ChevronLeft size={20} /> : <ChevronRight size={20} />}
-        </button>
-      </div>
+      {/* Toggle Button */}
+      <button
+        className="toggle-button"
+        onClick={() => setIsCollapsed(!isCollapsed)}
+        style={{
+          right: isCollapsed ? "0" : "50%", // Dynamically position the button
+          transition: "right 0.5s ease-in-out",
+        }}
+      >
+        {isCollapsed ? <ChevronLeft size={20} /> : <ChevronRight size={20} />}
+      </button>
     </div>
   );
 };

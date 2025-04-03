@@ -126,20 +126,19 @@
 /*** Movie ***/
 
 
-import React, { useState } from 'react';
-import SplitView from './movie/SplitView';
-import './App.css';
-
-const messages = [];
+import React from "react";
+import BoxComponent from "./movie/BoxComponent";
 
 function App() {
-  const [isCollapsed, setIsCollapsed] = useState(false);
-
-  const toggleCollapse = () => {
-    setIsCollapsed(!isCollapsed);
-  };
-
-  return <SplitView messages={messages} isCollapsed={isCollapsed} toggleCollapse={toggleCollapse} />;
+  return (
+    <div>
+      <BoxComponent />
+    </div>
+  );
 }
 
 export default App;
+
+
+
+
